@@ -1,3 +1,6 @@
+html {
+  scroll-behavior: smooth;
+}
 *{
 box-sizing:border-box;
 }
@@ -44,19 +47,33 @@ gap:20px;
 margin-top:20px;
 }
 
-.project-card{
-background:#f1f5f9;
-padding:20px;
-border-radius:12px;
+.project-card {
+  background: #eef2f7;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-button{
-padding:10px 16px;
-border:none;
-border-radius:8px;
-background:#2563eb;
-color:white;
-cursor:pointer;
+.project-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 15px 30px rgba(0,0,0,0.15);
+}
+
+button {
+  padding: 10px 16px;
+  border: none;
+  border-radius: 8px;
+  background: #2563eb;
+  color: white;
+  cursor: pointer;
+  margin-top: 10px;
+  transition: transform 0.2s ease, background 0.2s ease;
+}
+
+button:hover {
+  background: #1d4ed8;
+  transform: scale(1.05);
 }
 
 button:hover{
@@ -69,4 +86,59 @@ color:white;
 text-align:center;
 padding:20px;
 margin-top:40px;
+}
+.card {
+  animation: fadeIn 0.8s ease forwards;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+#taskList {
+  list-style: none;
+  padding: 0;
+  margin-top: 10px;
+}
+
+#taskList li {
+  background: white;
+  padding: 8px;
+  margin-top: 6px;
+  border-radius: 6px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.deleteBtn {
+  background: crimson;
+  border: none;
+  color: white;
+  padding: 5px 8px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+.dark-mode {
+  background: #0f172a;
+  color: #e2e8f0;
+}
+
+.dark-mode .card {
+  background: #1e293b;
+}
+
+.dark-mode nav {
+  background: #020617;
+}
+
+.dark-mode .project-card {
+  background: #334155;
 }
