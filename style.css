@@ -1,144 +1,158 @@
-html {
-  scroll-behavior: smooth;
-}
-*{
-box-sizing:border-box;
-}
+/* ===== RESET ===== */
 
 body{
 margin:0;
-font-family:Arial;
-background:#eaf6fb;
-color:#1f2937;
+font-family:'Segoe UI', sans-serif;
+background:#f8fafc;
+color:#0f172a;
+line-height:1.6;
 }
 
+/* ===== NAVBAR ===== */
+
 nav{
-background:#0f172a;
-padding:18px;
-text-align:center;
+position:sticky;
+top:0;
+background:white;
+padding:20px;
+display:flex;
+justify-content:center;
+gap:40px;
+border-bottom:1px solid #e2e8f0;
+z-index:1000;
 }
 
 nav a{
-color:white;
+color:#0f172a;
 text-decoration:none;
-margin:0 15px;
-font-size:18px;
+font-weight:600;
+transition:0.2s;
 }
 
-.container{
-max-width:900px;
-margin:40px auto;
-padding:20px;
+nav a:hover{
+color:#2563eb;
 }
+
+/* ===== HERO ===== */
+
+.hero{
+padding:120px 20px;
+text-align:center;
+background:white;
+}
+
+.hero h1{
+font-size:52px;
+margin-bottom:10px;
+font-weight:700;
+}
+
+.subtitle{
+font-size:20px;
+color:#64748b;
+margin-bottom:40px;
+}
+
+/* ===== HERO BUTTONS ===== */
+
+.hero-buttons{
+display:flex;
+justify-content:center;
+gap:20px;
+flex-wrap:wrap;
+}
+
+.hero-btn{
+padding:14px 26px;
+border-radius:12px;
+text-decoration:none;
+font-weight:600;
+transition:all 0.25s ease;
+}
+
+.hero-btn.primary{
+background:#0f172a;
+color:white;
+}
+
+.hero-btn.primary:hover{
+background:#1e293b;
+transform:translateY(-3px);
+}
+
+.hero-btn.secondary{
+border:2px solid #0f172a;
+color:#0f172a;
+}
+
+.hero-btn.secondary:hover{
+background:#0f172a;
+color:white;
+transform:translateY(-3px);
+}
+
+/* ===== CARDS ===== */
 
 .card{
 background:white;
-padding:30px;
-margin-bottom:25px;
-border-radius:16px;
-box-shadow:0 10px 25px rgba(0,0,0,0.08);
-text-align:center;
+padding:40px;
+border-radius:20px;
+box-shadow:0 10px 30px rgba(0,0,0,0.05);
+margin:40px auto;
+max-width:900px;
+transition:0.3s;
 }
+
+.card:hover{
+transform:translateY(-5px);
+}
+
+/* ===== PROJECT GRID ===== */
 
 .projects{
 display:grid;
-grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
-gap:20px;
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+gap:30px;
+margin-top:30px;
+}
+
+.project-card{
+background:white;
+padding:30px;
+border-radius:20px;
+box-shadow:0 8px 20px rgba(0,0,0,0.05);
+transition:0.3s;
+text-align:center;
+}
+
+.project-card:hover{
+transform:translateY(-5px);
+}
+
+/* ===== SKILLS ===== */
+
+.skills{
+display:flex;
+justify-content:center;
+flex-wrap:wrap;
+gap:15px;
 margin-top:20px;
 }
 
-.project-card {
-  background: #eef2f7;
-  padding: 20px;
-  border-radius: 12px;
-  box-shadow: 0 5px 15px rgba(0,0,0,0.08);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.project-card:hover {
-  transform: translateY(-6px);
-  box-shadow: 0 15px 30px rgba(0,0,0,0.15);
-}
-
-button {
-  padding: 10px 16px;
-  border: none;
-  border-radius: 8px;
-  background: #2563eb;
-  color: white;
-  cursor: pointer;
-  margin-top: 10px;
-  transition: transform 0.2s ease, background 0.2s ease;
-}
-
-button:hover {
-  background: #1d4ed8;
-  transform: scale(1.05);
-}
-
-button:hover{
-background:#1d4ed8;
-}
-
-footer{
+.skill{
 background:#0f172a;
 color:white;
+padding:8px 16px;
+border-radius:20px;
+font-size:14px;
+}
+
+/* ===== FOOTER ===== */
+
+footer{
 text-align:center;
-padding:20px;
-margin-top:40px;
-}
-.card {
-  animation: fadeIn 0.8s ease forwards;
-}
-
-@keyframes fadeIn {
-  from {
-    opacity: 0;
-    transform: translateY(20px);
-  }
-
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-#taskList {
-  list-style: none;
-  padding: 0;
-  margin-top: 10px;
-}
-
-#taskList li {
-  background: white;
-  padding: 8px;
-  margin-top: 6px;
-  border-radius: 6px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-
-.deleteBtn {
-  background: crimson;
-  border: none;
-  color: white;
-  padding: 5px 8px;
-  border-radius: 4px;
-  cursor: pointer;
-}
-.dark-mode {
-  background: #0f172a;
-  color: #e2e8f0;
-}
-
-.dark-mode .card {
-  background: #1e293b;
-}
-
-.dark-mode nav {
-  background: #020617;
-}
-
-.dark-mode .project-card {
-  background: #334155;
+padding:30px;
+margin-top:60px;
+border-top:1px solid #e2e8f0;
+color:#64748b;
 }
