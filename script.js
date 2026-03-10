@@ -79,3 +79,20 @@ function loadTheme(){
 }
 
 loadTheme();
+function sendMessage(){
+
+let name = document.getElementById("contactName").value
+let email = document.getElementById("contactEmail").value
+let message = document.getElementById("contactMessage").value
+
+if(name === "" || email === "" || message === ""){
+
+document.getElementById("contactResult").innerText = "Please fill all fields"
+
+}else{
+
+document.getElementById("contactResult").innerText = "Message sent successfully!"
+
+}
+
+}
